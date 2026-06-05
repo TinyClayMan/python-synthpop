@@ -60,7 +60,7 @@ class DataProcessor:
                 if n_unique < 10:
                     encoder = LabelEncoder()
                 elif n_unique < 50:
-                    encoder = OneHotEncoder(sparse=False, drop="first")
+                    encoder = OneHotEncoder(sparse_output=False, drop="first")
                 else:
                     # Frequency encoding
                     value_counts = data[col].value_counts(normalize=True)
